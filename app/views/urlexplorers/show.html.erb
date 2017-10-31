@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @urlexplorer.url %>
+</p>
+
+<p>
+  <strong>Parsed headers:</strong>
+  <%= @urlexplorer.parsed_headers %>
+</p>
+<%= link_to 'Edit', edit_urlexplorer_path(@urlexplorer) %> |
+<%= link_to 'Back', urlexplorers_path %>

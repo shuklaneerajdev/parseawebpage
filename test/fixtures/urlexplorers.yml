@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  url: MyText
+  content: MyText
+  parsed_headers: 
+  is_parsing_done: false
+
+two:
+  url: MyText
+  content: MyText
+  parsed_headers: 
+  is_parsing_done: false
