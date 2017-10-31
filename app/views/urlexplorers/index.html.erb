@@ -1,29 +1,35 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <p id="notice"><%= notice %></p>
 
-<h1>Urlexplorers</h1>
+    <h1>Urlexplorers</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Url</th>
-      <th>Parsed headers</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Url</th>
+          <th>Parsed headers</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
 
-  <tbody>
-    <% @urlexplorers.each do |urlexplorer| %>
-      <tr>
-        <td><%= urlexplorer.url %></td>
-        <td><%= urlexplorer.parsed_headers %></td>
-        <td><%= link_to 'Show', urlexplorer %></td>
-        <td><%= link_to 'Edit', edit_urlexplorer_path(urlexplorer) %></td>
-        <td><%= link_to 'Destroy', urlexplorer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <tbody>
+        <% @urlexplorers.each do |urlexplorer| %>
+          <tr>
+            <td><%= urlexplorer.url %></td>
+            <td><%= urlexplorer.parsed_headers %></td>
+            <td><%= link_to 'Show', urlexplorer %></td>
+            <td><%= link_to 'Edit', edit_urlexplorer_path(urlexplorer) %></td>
+            <td><%= link_to 'Destroy', urlexplorer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
 
-<br>
+    <br>
 
-<%= link_to 'New Urlexplorer', new_urlexplorer_path %>
+    <%= link_to 'New Urlexplorer', new_urlexplorer_path, class: "btn btn-primary btn-lg" %>
+    <br>
+    <br>
+  </div>
+</div>

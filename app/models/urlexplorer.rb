@@ -1,7 +1,7 @@
 require 'open-uri'
 class Urlexplorer < ApplicationRecord
   validate :url_must_be_valid
-  before_commit :get_content_and_parse_and_store
+  before_commit :get_content_and_parse_and_store, on: :create
 
   def url_must_be_valid
     if !is_valid_url(url)

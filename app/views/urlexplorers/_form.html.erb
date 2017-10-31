@@ -12,11 +12,10 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :url %>
-    <%= f.text_area :url %>
+    <%= f.text_area :url, placeholder:'Enter the url to parse', autofocus: true %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Parse"%>
+    <%= f.submit "Parse", class: "btn btn-primary btn-lg"%>
   </div>
 <% end %>

@@ -29,7 +29,7 @@ class UrlexplorersController < ApplicationController
 
     respond_to do |format|
       if @urlexplorer.save
-        format.html { redirect_to @urlexplorer, notice: 'Url was successfully stored. We would parse and process it.' }
+        format.html { redirect_to @urlexplorer, notice: 'Url was successfully stored and parsed.' }
         format.json { render :show, status: :created, location: @urlexplorer }
       else
         format.html { render :new }
