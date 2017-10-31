@@ -40,6 +40,13 @@ class Urlexplorer < ApplicationRecord
       puts current.text
     end
     parsed_data['h3'] = h3s_array
+
+    link_urls = Array.new
+    document.search('a').each do |current|
+      link_urls << current.attribute('href').to_s
+      puts current.attribute('href').to_s
+    end
+    parsed_data['link_urls'] = link_urls
     self.update_attribute(:parsed_headers, parsed_data.to_json)
     self.update_attribute(:is_parsing_done, true)
   end
