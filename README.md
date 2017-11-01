@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a basic application which takes a URL, parses it and then stores the h1, h2, h3 and links for it which can be shown to the user.
 
-Things you may want to cover:
+* There is corresponding JSON endpoint for each element.
 
-* Ruby version
+For running this application, just checkout database.yml file and either create the corresponding database and user credentials.
+Then you can run
+bundle exec rake db:migrate
 
-* System dependencies
+Then run
+rails s
 
-* Configuration
+and you are good to go. Visit http://localhost:3000 to parse the webpage that you would like.
 
-* Database creation
 
-* Database initialization
+* There are a few limitations of the app. The parsing is done in the model of the application, which can timeout in case of a really big webpage and that can be moved to something like Sidekiq.
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Sometimes the http or https redirection for a page is not allowed, so that case can be handled.
